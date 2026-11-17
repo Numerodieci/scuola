@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libro - I Miei Libri</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { font-family: 'Fredoka', sans-serif; background: #F1F5F9; display: flex; flex-direction: column; }
+  .topbar {
+    background: white; border-bottom: 2px solid #E2E8F0;
+    padding: 10px 16px; display: flex; align-items: center; gap: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); flex-shrink: 0;
+  }
+  .home-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, #3B82F6, #1D4ED8); color: white;
+    text-decoration: none; padding: 10px 18px; border-radius: 12px;
+    font-weight: 700; font-size: 0.95em;
+    box-shadow: 0 3px 0 #1E3A8A;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .home-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 0 #1E3A8A; }
+  .home-btn:active { transform: translateY(1px); box-shadow: 0 1px 0 #1E3A8A; }
+  .libro-title { font-weight: 600; color: #475569; font-size: 0.95em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  iframe { flex: 1; width: 100%; border: none; background: white; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="index.html" class="home-btn" title="Torna alla home">🏠 Home</a>
+  <span class="libro-title" id="titolo">Libro</span>
+</div>
+<iframe id="frame" src="about:blank" title="Libro"></iframe>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const libro = params.get('libro') || '';
+  const frame = document.getElementById('frame');
+  const titolo = document.getElementById('titolo');
+  if (libro) {
+    frame.src = libro;
+    titolo.textContent = '📖 ' + libro.replace(/\.html$/i, '');
+    document.title = libro.replace(/\.html$/i, '') + ' - I Miei Libri';
+  } else {
+    frame.srcdoc = '<div style="font-family:sans-serif;padding:40px;text-align:center;color:#64748B;">Nessun libro selezionato. <a href="index.html">Torna alla home</a>.</div>';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Miei Libri - Scuola Primaria</title>
+<meta name="theme-color" content="#F8FAFC">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>📚 I Miei Libri</h1>
+    <p>La raccolta completa delle 12 materie per la scuola primaria</p>
+  </header>
+
+  <div class="search-wrapper">
+    <input type="search" id="globalSearch" placeholder="🔍 Cerca in tutti i 12 libri...">
+    <button id="searchClear" class="search-clear" title="Cancella">✕</button>
+  </div>
+  <div id="searchInfo" class="search-info"></div>
+
+  <main class="grid" id="grid">
+
+    <a href="viewer.html?libro=Arte%20e%20Immagine.html" class="card card-arte" data-libro="Arte e Immagine.html" data-keywords="colori forme creatività arte disegno pittura artisti tecniche">
+      <span class="card-emoji">🎨</span>
+      <h2>Arte e Immagine</h2>
+      <p>Colori, forme e creatività per piccoli artisti</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Educazione%20civica.html" class="card card-civica" data-libro="Educazione civica.html" data-keywords="cittadinanza diritti doveri costituzione regole rispetto comunità ambiente">
+      <span class="card-emoji">⚖️</span>
+      <h2>Educazione Civica</h2>
+      <p>Cittadini consapevoli, oggi e domani</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Educazione%20fisica.html" class="card card-fisica" data-libro="Educazione fisica.html" data-keywords="movimento sport benessere corpo salute giochi atletica">
+      <span class="card-emoji">🏃</span>
+      <h2>Educazione Fisica</h2>
+      <p>Movimento, sport e benessere</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Geografia.html" class="card card-geografia" data-libro="Geografia.html" data-keywords="mondo mappe territorio paesaggi italia europa continenti fiumi montagne">
+      <span class="card-emoji">🌍</span>
+      <h2>Geografia</h2>
+      <p>Un viaggio nel mondo per bambini curiosi</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Inglese.html" class="card card-inglese" data-libro="Inglese.html" data-keywords="english inglese lingua straniera vocabulary grammar culture">
+      <span class="card-emoji">🇬🇧</span>
+      <h2>Inglese</h2>
+      <p>Let's learn English together!</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Italiano.html" class="card card-italiano" data-libro="Italiano.html" data-keywords="parole grammatica lettura scrittura poesia racconti verbi nomi aggettivi">
+      <span class="card-emoji">📚</span>
+      <h2>Italiano</h2>
+      <p>Un giardino di parole per bambini curiosi</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Matematica.html" class="card card-matematica" data-libro="Matematica.html" data-keywords="numeri forme calcolo geometria frazioni problemi addizione sottrazione">
+      <span class="card-emoji">📐</span>
+      <h2>Matematica</h2>
+      <p>Numeri, forme e scoperte</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Musica.html" class="card card-musica" data-libro="Musica.html" data-keywords="suoni ritmi melodie strumenti note canto compositori">
+      <span class="card-emoji">🎵</span>
+      <h2>Musica</h2>
+      <p>Suoni, ritmi e melodie per piccoli musicisti</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Religione.html" class="card card-religione" data-libro="Religione.html" data-keywords="religione cattolica fede valori bibbia gesù chiesa sacramenti">
+      <span class="card-emoji">⛪</span>
+      <h2>Religione Cattolica</h2>
+      <p>Fede, valori e dialogo per crescere insieme</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Scienze.html" class="card card-scienze" data-libro="Scienze.html" data-keywords="scienze corpo umano natura animali piante esperimenti materia energia">
+      <span class="card-emoji">🔬</span>
+      <h2>Scienze</h2>
+      <p>Un laboratorio di scoperte per bambini curiosi</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Storia.html" class="card card-storia" data-libro="Storia.html" data-keywords="storia tempo preistoria romani egizi greci medioevo rinascimento">
+      <span class="card-emoji">📖</span>
+      <h2>Storia</h2>
+      <p>Un viaggio nel tempo per bambini curiosi</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+    <a href="viewer.html?libro=Tecnologia%20e%20Informatica.html" class="card card-tecnologia" data-libro="Tecnologia e Informatica.html" data-keywords="tecnologia informatica computer coding scratch robot internet digitale">
+      <span class="card-emoji">💻</span>
+      <h2>Tecnologia e Informatica</h2>
+      <p>Scopri la tecnologia che ci circonda!</p>
+      <span class="card-cta">Apri il libro →</span>
+    </a>
+
+  </main>
+
+  <footer>
+    <p>✨ 12 materie • 5 classi ciascuna • Un anno di scoperte ✨</p>
+    <p class="install-hint" id="installHint"></p>
+  </footer>
+</div>
+
+<script>
+const searchInput = document.getElementById('globalSearch');
+const searchClear = document.getElementById('searchClear');
+const searchInfo  = document.getElementById('searchInfo');
+const cards       = Array.from(document.querySelectorAll('.card'));
+
+let searchIndex = null;
+
+async function loadSearchIndex() {
+  if (searchIndex) return searchIndex;
+  try {
+    const res = await fetch('search-index.json');
+    if (!res.ok) throw new Error('no index');
+    searchIndex = await res.json();
+  } catch (e) {
+    searchIndex = null;
+  }
+  return searchIndex;
+}
+
+function normalizza(s) {
+  return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+async function runSearch() {
+  const q = searchInput.value.trim();
+  searchClear.classList.toggle('visible', q.length > 0);
+
+  if (q.length < 2) {
+    cards.forEach(c => c.style.display = '');
+    searchInfo.textContent = '';
+    searchInfo.classList.remove('no-results');
+    return;
+  }
+
+  await loadSearchIndex();
+  const qn = normalizza(q);
+  let count = 0;
+
+  cards.forEach(card => {
+    const kw = normalizza(card.dataset.keywords || '');
+    const titolo = normalizza(card.querySelector('h2').textContent);
+    let match = titolo.includes(qn) || kw.includes(qn);
+    if (!match && searchIndex && searchIndex[card.dataset.libro]) {
+      match = normalizza(searchIndex[card.dataset.libro]).includes(qn);
+    }
+    card.style.display = match ? '' : 'none';
+    if (match) count++;
+  });
+
+  if (count === 0) {
+    searchInfo.textContent = `😕 Nessun risultato per "${q}".`;
+    searchInfo.classList.add('no-results');
+  } else {
+    searchInfo.textContent = `🔍 Trovati ${count} libr${count === 1 ? 'o' : 'i'} per "${q}"`;
+    searchInfo.classList.remove('no-results');
+  }
+}
+
+let debounce;
+searchInput.addEventListener('input', () => {
+  clearTimeout(debounce);
+  debounce = setTimeout(runSearch, 200);
+});
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  searchClear.classList.remove('visible');
+  runSearch();
+  searchInput.focus();
+});
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    searchInput.value = '';
+    searchClear.classList.remove('visible');
+    runSearch();
+  }
+});
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+
+let deferredPrompt = null;
+const installHint = document.getElementById('installHint');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installHint.innerHTML = '<button id="btnInstall" class="install-btn">📲 Installa l\'app</button>';
+  const btn = document.getElementById('btnInstall');
+  btn.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    installHint.innerHTML = '✅ App installata!';
+  });
+});
+
+window.addEventListener('appinstalled', () => {
+  installHint.innerHTML = '✅ App installata con successo!';
+});
+</script>
+
+</body>
+</html>
